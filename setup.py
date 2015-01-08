@@ -7,7 +7,7 @@ setup(name='numerical_analysis',
       author='Ludovic Charleux, Fabien Formosa',
       author_email='ludovic.charleux@univ-savoie.fr',
       license='GPL v2',
-      packages=[],
+      packages=["dummy"],
       zip_safe=False,
       install_requires=[
           "numpy",
