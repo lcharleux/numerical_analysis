@@ -56,15 +56,15 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'MGM652 Méthodes numériques'
-copyright = u'2013, Ludovic Charleux'
+project = u"Outils numériques pour l'ingénieur"
+copyright = u'2015, Ludovic Charleux, Fabien Formosa'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = '2012-2013'
+version = '2014-2015'
 # The full version, including alpha/beta/rc tags.
 #release = '1.0.0'
 
@@ -183,7 +183,7 @@ html_show_copyright = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'MGM652'
+htmlhelp_basename = 'Outils numériques'
 
 html_copy_source = True
 html_show_sourcelink = True
@@ -199,8 +199,8 @@ html_show_sourcelink = True
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'MGM652_cours.tex', u'MGM652 Cours',
-   u'Ludovic Charleux', 'manual'),
+  ('index', 'Outils_Numeriques_cours.tex', u'Outils Numeriques Cours',
+   u'Ludovic Charleux, Fabien Formosa', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -232,6 +232,6 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'MGM652', u'MGM652 Cours',
-     [u'Ludovic Charleux'], 1)
+    ('index', 'Outils numériques', u'Outils Numériques Cours',
+     [u'Ludovic Charleux, Fabien Formosa'], 1)
 ]
