@@ -13,6 +13,7 @@ Contenu du cours:
    :maxdepth: 3
    
    Python
+   Traitement_signal
    Traitement_images
    Optimisation
    Exercices

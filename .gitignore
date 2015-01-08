@@ -2,5 +2,11 @@ makedoc/
 *~
 *.pyc
 doc/_build/*
-*.pdf
 *.rpy
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
