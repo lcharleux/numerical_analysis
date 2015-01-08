@@ -110,8 +110,8 @@ pygments_style = 'sphinx'
 #html_theme = 'default'
 #html_theme = 'pyramid'
 
-html_output_encoding = 'iso-8859-1'
-#html_output_encoding = 'utf-8'
+#html_output_encoding = 'iso-8859-1'
+html_output_encoding = 'utf-8'
 
 
 # Theme options are theme-specific and customize the look and feel of a theme
