@@ -46,11 +46,11 @@ Une image se résumera donc à une matrice :math:`Z_{ij}` où :math:`i` et :math
 Operations
 +++++++++++
 
-Dans cette partie, nous utiliserons une image générée pour l'occasion:
+Dans cette partie, nous utiliserons une  image générée pour l'occasion:
 
 .. plot:: Traitement_images/Example_code/generate_image.py
      
-
+Vous pouvez télécharger l'image ici: :download:`image.png <Traitement_images/Example_code/image.png>` 
 Histogramme
 ~~~~~~~~~~~~~~~~~~~~~~
 

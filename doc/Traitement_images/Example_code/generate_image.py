@@ -26,4 +26,5 @@ image.save('image.png')
 
 plt.figure()
 plt.imshow(im)
+plt.colorbar()
 plt.show()
