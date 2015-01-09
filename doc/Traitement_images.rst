@@ -2,13 +2,13 @@ Images Numériques
 ___________________
 
 
-Les images numériques sont des images décrites dans un format numérique. On peut les utiliser pour interpréter quantitativement certaines phénomènes qu'elles mettent en évidence. Cette partie dresse un rapide tableau des différentes approches basiques qui permettent d'effectuer ces tâches. 
+Les images numériques sont des images décrites dans un format numérique. On peut les utiliser pour interpréter quantitativement certaines grandeurs. Cette partie dresse un rapide tableau des différentes approches basiques qui permettent d'effectuer ces tâches et donne des pistes pour aller plus loin sur chaque thème abordé.
 
 
 Formation
 +++++++++++++++++++
 
-Une image est issue de la mesure d'un phénomène physique particulier par un dispositif adapté. On trouve ainsi des images de différentes natures:
+Selon le dispositif qui l'a produite, le sens physique des informations contenues dans une image est différent. Voici quelques exemples d'images classées par type d'informations:
 
 * Lumière visible: `photographie <http://fr.wikipedia.org/wiki/Photographie>`_ , `microscopie optique <http://fr.wikipedia.org/wiki/Microscope_optique>`_.
 
@@ -46,17 +46,17 @@ Une image se résumera donc à une matrice :math:`Z_{ij}` où :math:`i` et :math
 Operations
 +++++++++++
 
+Dans cette partie, nous utiliserons une image générée pour l'occasion:
+
+.. plot:: Traitement_images/Example_code/generate_image.py
+     
+
 Histogramme
 ~~~~~~~~~~~~~~~~~~~~~~
 
-A titre d'exemple, on travaille sur une image d'altitude de l'Europe (source: `European Environment Agency <http://www.eea.europa.eu/data-and-maps/data/digital-elevation-model-of-europe>`_ ) dans laquelle :math:`1 \; pixel = 1 \; km \times \; 1 \; km`.
+Un histogramme représente la répartition de la population de pixels en fonction de leur altitude. Une valeur haute dans l'histogramme indique donc qu'un grand nombre de pixels correspondent à l'altitude considérée.
 
-.. plot:: Traitement_images/Example_code/europe.py
-    :include-source: 
-
-On peut alors se demander quelle surface du territoire européen est située dans telle bande d'altitudes de :math:`100m` de largeur..
-
-.. plot:: Traitement_images/Example_code/europe_hist.py
+.. plot:: Traitement_images/Example_code/image_hist.py
     :include-source: 
 
 
@@ -65,9 +65,9 @@ On peut alors se demander quelle surface du territoire européen est située dan
 Seuillage
 ~~~~~~~~~~~~~~~~~~~~~~
 
-L'histogramme montre clairement que la majorité du territoire est située à :math:`Z \leq 100m`. En fait, les zones marines sont à une altitude :math:`Z = 0m` et contribuent grandement à cette grande surface. Le seuillage consiste à transformer une image monochrome en **image binaire** en appliquant un test booléen à chaque pixel. Une image binaire est ainsi formée de 0 et de 1 ou de **Vrai** et **Faux**. Dans le cas présent, on peut alors chercher à isoler la mer de la terre en effectuant un seuillage :math:`Z >0m` :
+L'histogramme montre deux pics ( :math:`Z \approx 20' et :math:`Z \approx 230`) correspondant à deux populations de pixels. Le seuillage consiste à transformer une image monochrome en **image binaire** en appliquant un test booléen à chaque pixel. Une image binaire est ainsi formée de 0 et de 1 ou de **Vrai** et **Faux**. Dans le cas présent, on peut alors chercher séparer les deux populations en effectuant un seuillage :math:`Z > 120` :
 
-.. plot:: Traitement_images/Example_code/europe_seuillage.py
+.. plot:: Traitement_images/Example_code/image_seuillage.py
     :include-source: 
 
 
