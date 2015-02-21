@@ -5,8 +5,8 @@ from scipy import ndimage
 from PIL import Image
 
 N = 256
-filt_core1, filt_core2 = 4, 3
-noise = .1
+filt_core1, filt_core2 = 4, 2
+noise = .05
 
 im = np.random.rand(N,N)
 im = ndimage.gaussian_filter(im,filt_core1)
@@ -18,9 +18,12 @@ im = ndimage.gaussian_filter(im,filt_core2)
 
 #im = ndimage.morphology.grey_erosion(im, structure = np.ones([5,5])) * 1.
 
-im += np.random.rand(N,N) * noise
-im = (im / im.max())*255
 
+#im += np.random.rand(N,N) * noise
+#im = (im / im.max())*255
+
+im += np.where(np.random.rand(N,N) < noise, 1., 0.) 
+im = np.where(im < 1., im, 1.) 
 image = Image.fromarray(np.asarray(im, dtype = np.uint8))
 image.save('image.png')
 

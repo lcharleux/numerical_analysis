@@ -106,7 +106,7 @@ head/foot}\insertframenumber/\inserttotalframenumber
 
 
 \author[LC]{\href{mailto:ludovic.charleux@univ-savoie.fr}{ludovic.charleux@univ-savoie.fr}}
-\title{Outils Numériques pour l'Ingénieur}
+\title{MGM657 Outils Numériques pour l'Ingénieur}
 \subtitle{Traitement de signal}
 %\subtitle{}
 \date{}
@@ -128,6 +128,15 @@ head/foot}\insertframenumber/\inserttotalframenumber
 \tableofcontents
 \end{frame}
 
+\section{Introduction}
+
+\begin{frame}{Vibration d'une poutre}
+\includegraphics[width=.9\textwidth]{../Example_code/flex_vib.pdf}
+\end{frame}
+
+\begin{frame}{Vibration d'une poutre: spectre}
+\includegraphics[width=.9\textwidth]{../Example_code/flex_vib_spectre.pdf}
+\end{frame}
 
 
 \section{Notations}
@@ -159,7 +168,7 @@ $$
   \begin{itemize}
   \item La lourdeur des calculs nécessite des outils numériques.
   \item Les signaux expérimentaux sont numérisés et donc aisément traités par ces outils.
-  \item Python est un language simple, au spectre d'applications vaste.
+  \item Python est un langage simple, au spectre d'applications vaste.
   \item Python est libre et donc gratuit, vous pouvez donc l'installer rapidement sur toute machine. Il est présent sur la majorité des distributions de Linux.
   \item Pour l'installer et lire les documentations: \href{http://www.python.org/}{http://www.python.org/}
   \item Modules utilisés: 
@@ -202,88 +211,88 @@ $$
   
 
   \end{frame}
-\section{Signaux}
-  \subsection{Signal sinusoïdal}
-  
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal sinusoïdal (1/3)}
- \begin{block}{Définition} 
- \lstinputlisting{listings/signal_sinusoidal.py}
- \end{block}
-  
-  \begin{block}{Fonction de tracé} 
-  On construit une fonction qui assure le tracé:
-  \lstinputlisting{listings/trace_signal.py}
-  \end{block}
-  \end{frame}
-  
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal sinusoïdal (2/3)}
-  \begin{block}{Tracé du signal} 
-  \lstinputlisting{listings/exemple1.py}
-  \end{block}
-  \end{frame}
-  
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal sinusoïdal (3/3)}
-  On obtient le fichier (vectoriel) \lstinline!sinusoide.pdf!\\  
-  \includegraphics[width=1.\textwidth]{figures/sinusoide.pdf}
-  \end{frame}
-  
-  
-%  \subsection{Signal bisinusoïdal}
+%\section{Signaux}
+%  \subsection{Signal sinusoïdal}
+%  
 %  \begin{frame}[containsverbatim]
-%  \frametitle{Signal bisinusoïdal (1/2)}
+%  \frametitle{Signal sinusoïdal (1/3)}
+% \begin{block}{Définition} 
+% \lstinputlisting{listings/signal_sinusoidal.py}
+% \end{block}
+%  
+%  \begin{block}{Fonction de tracé} 
+%  On construit une fonction qui assure le tracé:
+%  \lstinputlisting{listings/trace_signal.py}
+%  \end{block}
+%  \end{frame}
+%  
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal sinusoïdal (2/3)}
+%  \begin{block}{Tracé du signal} 
+%  \lstinputlisting{listings/exemple1.py}
+%  \end{block}
+%  \end{frame}
+%  
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal sinusoïdal (3/3)}
+%  On obtient le fichier (vectoriel) \lstinline!sinusoide.pdf!\\  
+%  \includegraphics[width=1.\textwidth]{figures/sinusoide.pdf}
+%  \end{frame}
+%  
+%  
+%%  \subsection{Signal bisinusoïdal}
+%%  \begin{frame}[containsverbatim]
+%%  \frametitle{Signal bisinusoïdal (1/2)}
+%%  \begin{block}{Intérêt}
+%%  Ce signal est la somme de deux composantes sinusoïdales pures. Il permet la mise en évidence des interactions entre les deux composantes lors du traitement.
+%%  \end{block}
+%%  \begin{block}{Tracé}
+%%  \lstinputlisting{listings/exemple3.py}
+%%  \end{block}  
+%%  \end{frame}  
+%  
+%%  \begin{frame}{Signal bisinusoïdal (2/2)}
+%%  On obtient le fichier (vectoriel) \lstinline!bisinus.pdf!\\  
+%%  \includegraphics[width=1.\textwidth]{figures/bisinus.pdf}
+%%  \end{frame}  
+%  
+%  \subsection{Signal carré}
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal carré (1/3)}
+%  \begin{block}{Construction de la fonction} 
+%  \lstinputlisting{listings/signal_carre.py}
+%  \end{block}
+%  \end{frame}  
+%  
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal carré (2/3)}  
+%  \begin{block}{Tracé du signal} 
+%  \lstinputlisting{listings/exemple2.py}
+%  \end{block}
+%  \end{frame}
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal carré (3/3)}
+%  On obtient le fichier (vectoriel) \lstinline!carre.pdf!\\  
+%  \includegraphics[width=1.\textwidth]{figures/carre.pdf}
+%  \end{frame}
+%  
+%  \subsection{Signal expérimental: mesure d'accélération sur une cloche}
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal expérimental: mesure d'accélération sur une cloche}
 %  \begin{block}{Intérêt}
-%  Ce signal est la somme de deux composantes sinusoïdales pures. Il permet la mise en évidence des interactions entre les deux composantes lors du traitement.
+%  Ce signal pseudo périodique est obtenu expérimentalement au moyen d'un accéléromètre fixé sur une cloche (visible en salle C114) et excitée par un battant. Il est fourni dans une fichier sérialisé par le module Python \href{http://docs.python.org/library/pickle.html}{Pickle}.  
 %  \end{block}
 %  \begin{block}{Tracé}
-%  \lstinputlisting{listings/exemple3.py}
-%  \end{block}  
-%  \end{frame}  
-  
-%  \begin{frame}{Signal bisinusoïdal (2/2)}
-%  On obtient le fichier (vectoriel) \lstinline!bisinus.pdf!\\  
-%  \includegraphics[width=1.\textwidth]{figures/bisinus.pdf}
-%  \end{frame}  
-  
-  \subsection{Signal carré}
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal carré (1/3)}
-  \begin{block}{Construction de la fonction} 
-  \lstinputlisting{listings/signal_carre.py}
-  \end{block}
-  \end{frame}  
-  
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal carré (2/3)}  
-  \begin{block}{Tracé du signal} 
-  \lstinputlisting{listings/exemple2.py}
-  \end{block}
-  \end{frame}
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal carré (3/3)}
-  On obtient le fichier (vectoriel) \lstinline!carre.pdf!\\  
-  \includegraphics[width=1.\textwidth]{figures/carre.pdf}
-  \end{frame}
-  
-  \subsection{Signal expérimental: mesure d'accélération sur une cloche}
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal expérimental: mesure d'accélération sur une cloche}
-  \begin{block}{Intérêt}
-  Ce signal pseudo périodique est obtenu expérimentalement au moyen d'un accélérometre fixé sur une cloche (visible en salle C114) et excitée par un battant. Il est fourni dans une fichier sérialisé par le module Python \href{http://docs.python.org/library/pickle.html}{Pickle}.  
-  \end{block}
-  \begin{block}{Tracé}
-  \lstinputlisting{listings/exemple4.py}
-  \end{block}
-  \end{frame}
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal expérimental: mesure d'accélération sur une cloche}
-  On obtient le fichier (vectoriel) \lstinline!cloche.pdf!\\  
-  \includegraphics[width=1.\textwidth]{figures/cloche.pdf}
-  \end{frame}
+%  \lstinputlisting{listings/exemple4.py}
+%  \end{block}
+%  \end{frame}
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal expérimental: mesure d'accélération sur une cloche}
+%  On obtient le fichier (vectoriel) \lstinline!cloche.pdf!\\  
+%  \includegraphics[width=1.\textwidth]{figures/cloche.pdf}
+%  \end{frame}
 
-\section{Echantillonage}
+\section{Échantillonnage}
   \subsection{Les bases}
   \begin{frame}{Les bases}
   \begin{block}{Principe}
@@ -291,11 +300,11 @@ $$
   $$
   t_n = t_{min}+\frac{n}{f_e}, \; n \in \; [0,N[
   $$
-  La fréquence $f_e$ est la fréquence d'échantillonage. La durée d'observation du signal notée $D$ est donc obtenue par:
+  La fréquence $f_e$ est la fréquence d’échantillonnage. La durée d'observation du signal notée $D$ est donc obtenue par:
   $$
   D = N/f_e
   $$
-  Le signal échantilloné est alors obtenu par:
+  Le signal échantillonné est alors obtenu par:
   $$
   x_n=x(t_n)
   $$
@@ -304,7 +313,7 @@ $$
   \begin{block}{Paramètres importants}  
   \begin{itemize}
   \item $\frac{D}{T}$: ajustable en modifiant la durée d'observation $D$
-  \item $\frac{f_e}{f}$: ajustable en modifiant la fréquence d'échantillonage $f_e$.
+  \item $\frac{f_e}{f}$: ajustable en modifiant la fréquence d’échantillonnage $f_e$.
   \end{itemize}
   \end{block}
   \end{frame}
@@ -347,7 +356,7 @@ $$
   \begin{frame}{Hautes fréquences et aliasing}
   \includegraphics[width=1.\textwidth]{figures/echant_sin_6.pdf}\\
   \begin{alertblock}{Hautes fréquences et aliasing}
-  Les fréquences trop hautes vis-à-vis de la fréquence d'échantillonage (\textit{i. e.} $f\geq f_e/2$) sont non seulement perdues mais peuvent produire des artefacts sous la forme de basses fréquences. Il est donc impératif de filtrer le signal préalablement à son échantillonage pour couper toutes les fréquences supérieures à $f_e/2$.
+  Les fréquences trop hautes vis-à-vis de la fréquence d’échantillonnage (\textit{i. e.} $f\geq f_e/2$) sont non seulement perdues mais peuvent produire des artefacts sous la forme de basses fréquences. Il est donc impératif de filtrer le signal préalablement à son échantillonnage pour couper toutes les fréquences supérieures à $f_e/2$.
   \end{alertblock}
   \end{frame}
 
@@ -365,7 +374,7 @@ $$
   \end{align}
   \end{block}
   \begin{alertblock}{Ce qu'il faut comprendre}
-  Les signaux de fréquence $f^*=f+k f_e$ avec $k\in \mathbb{Z}$ sont indiscernables par échantillonage. Dans le cadre d'une étude expérimentale, il faut donc s'assurer qu'une seule de ces fréquences est présente dans le signal échantilloné.
+  Les signaux de fréquence $f^*=f+k f_e$ avec $k\in \mathbb{Z}$ sont indiscernables par échantillonnage. Dans le cadre d'une étude expérimentale, il faut donc s'assurer qu'une seule de ces fréquences est présente dans le signal échantillonné.
   \end{alertblock}
   \end{frame}
   
@@ -797,205 +806,205 @@ Renvoie $X_n = [0,-2j,0,2j]$ ce qui est identique au résultat obtenu par DFT. O
 \includegraphics[width=1.\textwidth]{figures/FFT_cloche.pdf} \\
 \end{frame}
 
-\section{Traitement d'images}
-
-\begin{frame}{Séparation des phases dans un alliage SiNb}
-  \begin{columns}
-\column{.35\textwidth}
-\includegraphics[width=1.\textwidth]{figures/SiNb.png}
-\column{.65\textwidth}
-
-\begin{block}{Image}
-  \begin{itemize}
-  \item 260 x 372 pixels
-  \item 8 bits (256 niveaux de gris).
-  \item $Nb_3Si$ en gris clair et $Nb_3Si_5$ en noir.
-  \item Source: \href{http://www.onera.fr/images-science/materiaux-structures/siliciure-niobium-galerie.php}{Onera}
-  \end{itemize}
-  \end{block}
-\end{columns}
- 
- 
- 
-  \begin{block}{Objectif}
-  \begin{itemize}
-  \item Isoler les deux phases.
-  \item Calculer la proportion de chaque phase.
-  \item Calculer la taille moyenne de chaque dendrite de $Nb_3Si_5$
-  \end{itemize}
-  \end{block}
-  \end{frame}
-
-\begin{frame}{Ouverture d'une image}
-  \begin{columns}
-\column{.45\textwidth}
-\includegraphics[width=1.\textwidth]{figures/image_original.png}
-\column{.55\textwidth}
-\lstinputlisting[firstline=1,lastline=17,firstnumber=1]{listings/improc/image.py}
-\end{columns}
-\begin{alertblock}{Questions}
-Comment séparer les deux phases ?
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{L'histogramme}
-  \begin{columns}
-\column{.55\textwidth}
-\includegraphics[width=1.\textwidth]{figures/image_hist.png}
-\column{.45\textwidth}
-\lstinputlisting[firstline=19,lastline=24,firstnumber=19]{listings/improc/image.py}
-\end{columns}
-\begin{alertblock}{Questions}
-L'histogramme nous informe-t-il sur les niveaux correspondant aux différentes couleurs ?
-\end{alertblock}
-\end{frame}
-
-
-\begin{frame}{Seuillage}
- \begin{columns}
-\column{.5\textwidth}
-\includegraphics[width=1.\textwidth]{figures/image_threshold.png}
-\column{.5\textwidth}
-\lstinputlisting[firstline=26,lastline=34,firstnumber=26]{listings/improc/image.py}
-\end{columns}
-\begin{alertblock}{Questions}
-L'image seuillée permet-elle de séparer proprement les deux phases ?
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{\'Erosion}
- \begin{columns}
-\column{.5\textwidth}
-\includegraphics[width=1.\textwidth]{figures/image_erosion.png}
-\column{.5\textwidth}
-\lstinputlisting[firstline=37,lastline=48,firstnumber=37]{listings/improc/image.py}
-\end{columns}
-\begin{alertblock}{Questions}
-L'érosion a-t-elle modifié la proportion des deux phases ? comment contrer cet effet ?
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{Dilatation}
- \begin{columns}
-\column{.5\textwidth}
-\includegraphics[width=1.\textwidth]{figures/image_dilation.png}
-\column{.5\textwidth}
-\lstinputlisting[firstline=50,lastline=59,firstnumber=50]{listings/improc/image.py}
-\end{columns}
-\begin{alertblock}{Questions}
-Comment séparer les dendrites ?
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{Labélisation}
- \begin{columns}
-\column{.5\textwidth}
-\includegraphics[width=1.\textwidth]{figures/image_labels.png}
-\column{.5\textwidth}
-\lstinputlisting[firstline=61,lastline=69,firstnumber=61]{listings/improc/image.py}
-\end{columns}
-\begin{alertblock}{Questions}
-Comment compter les dendrites ? 
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{Comptage}
- \begin{columns}
-\column{.5\textwidth}
-\begin{block}{Résultats}
-\begin{itemize}
-\item Proportion de dendrites: $9.6\;\%$
-\item Surface moyenne: $358 \; px \approx \;128 \; \mu m^2$ 
-
-\end{itemize}
-\end{block}
-\column{.5\textwidth}
-\lstinputlisting[firstline=71,lastline=75,firstnumber=71]{listings/improc/image.py}
-\end{columns}
-\begin{alertblock}{Conclusion}
-\begin{itemize}
-\item Outils de traitement quantitatif des images.
-\item Applications très vastes.
-\end{itemize} 
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{Analyse fréquentielle}
- \begin{columns}
-\column{.5\textwidth}
-\includegraphics[width=1.\textwidth]{figures/lapin_original.png}
-\column{.5\textwidth}
-\lstinputlisting[firstline=1,lastline=18,firstnumber=1]{listings/improc/lapin.py}
-\end{columns}
-\begin{alertblock}{Questions}
-Comment utiliser l'analyse fréquentielle pour modifier une image ?
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{FFT 2D}
- \begin{columns}
-\column{.5\textwidth}
-\includegraphics[width=1.\textwidth]{figures/lapin_spectre.png}
-\column{.5\textwidth}
-\lstinputlisting[firstline=20,lastline=28,firstnumber=20]{listings/improc/lapin.py}
-\end{columns}
-\begin{alertblock}{Questions}
-Comment construire un filtre basique à appliquer au spectre du lapin.
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{Filtre passe bas (1/3)}
- \begin{columns}
-\column{.5\textwidth}
-\includegraphics[width=1.\textwidth]{figures/lapin_lowpass.png}
-\column{.5\textwidth}
-\lstinputlisting[firstline=30,lastline=42,firstnumber=30]{listings/improc/lapin.py}
-\end{columns}
-\begin{alertblock}{Questions}
-Comment appliquer ce filtre à notre spectre ?
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{Filtre passe bas (2/3)}
- \begin{columns}
-\column{.5\textwidth}
-\includegraphics[width=1.\textwidth]{figures/lapin_lowpass2.png}
-\column{.5\textwidth}
-\lstinputlisting[firstline=44,lastline=52,firstnumber=44]{listings/improc/lapin.py}
-\end{columns}
-\begin{alertblock}{Questions}
-Quel est le résultat par FFT inverse ?
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{Filtre passe bas (3/3)}
- \begin{columns}
-\column{.5\textwidth}
-\includegraphics[width=1.\textwidth]{figures/lapin_lowpass3.png}
-\column{.5\textwidth}
-\lstinputlisting[firstline=54,lastline=62,firstnumber=54]{listings/improc/lapin.py}
-\end{columns}
-\begin{alertblock}{Questions}
-\begin{itemize}
-\item Trouvez vous la qualité correcte ?
-\item En vous inspirant des exemples 1D, avez vous une idée pour améliorer les choses ?
-\end{itemize}
-\end{alertblock}
-\end{frame}
-
-\begin{frame}{Filtre passe haut}
- \begin{columns}
-\column{.5\textwidth}
-\includegraphics[width=1.\textwidth]{figures/lapin_highpass.png}
-\column{.5\textwidth}
-\lstinputlisting[firstline=64,lastline=78,firstnumber=64]{listings/improc/lapin.py}
-\end{columns}
-\begin{alertblock}{Questions}
-\begin{itemize}
-\item Quelles applications ?
-\end{itemize}
-\end{alertblock}
-\end{frame}
+%\section{Traitement d'images}
+%
+%\begin{frame}{Séparation des phases dans un alliage SiNb}
+%  \begin{columns}
+%\column{.35\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/SiNb.png}
+%\column{.65\textwidth}
+%
+%\begin{block}{Image}
+%  \begin{itemize}
+%  \item 260 x 372 pixels
+%  \item 8 bits (256 niveaux de gris).
+%  \item $Nb_3Si$ en gris clair et $Nb_3Si_5$ en noir.
+%  \item Source: \href{http://www.onera.fr/images-science/materiaux-structures/siliciure-niobium-galerie.php}{Onera}
+%  \end{itemize}
+%  \end{block}
+%\end{columns}
+% 
+% 
+% 
+%  \begin{block}{Objectif}
+%  \begin{itemize}
+%  \item Isoler les deux phases.
+%  \item Calculer la proportion de chaque phase.
+%  \item Calculer la taille moyenne de chaque dendrite de $Nb_3Si_5$
+%  \end{itemize}
+%  \end{block}
+%  \end{frame}
+%
+%\begin{frame}{Ouverture d'une image}
+%  \begin{columns}
+%\column{.45\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/image_original.png}
+%\column{.55\textwidth}
+%\lstinputlisting[firstline=1,lastline=17,firstnumber=1]{listings/improc/image.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%Comment séparer les deux phases ?
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{L'histogramme}
+%  \begin{columns}
+%\column{.55\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/image_hist.png}
+%\column{.45\textwidth}
+%\lstinputlisting[firstline=19,lastline=24,firstnumber=19]{listings/improc/image.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%L'histogramme nous informe-t-il sur les niveaux correspondant aux différentes couleurs ?
+%\end{alertblock}
+%\end{frame}
+%
+%
+%\begin{frame}{Seuillage}
+% \begin{columns}
+%\column{.5\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/image_threshold.png}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=26,lastline=34,firstnumber=26]{listings/improc/image.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%L'image seuillée permet-elle de séparer proprement les deux phases ?
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{\'Erosion}
+% \begin{columns}
+%\column{.5\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/image_erosion.png}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=37,lastline=48,firstnumber=37]{listings/improc/image.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%L'érosion a-t-elle modifié la proportion des deux phases ? comment contrer cet effet ?
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{Dilatation}
+% \begin{columns}
+%\column{.5\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/image_dilation.png}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=50,lastline=59,firstnumber=50]{listings/improc/image.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%Comment séparer les dendrites ?
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{Labélisation}
+% \begin{columns}
+%\column{.5\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/image_labels.png}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=61,lastline=69,firstnumber=61]{listings/improc/image.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%Comment compter les dendrites ? 
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{Comptage}
+% \begin{columns}
+%\column{.5\textwidth}
+%\begin{block}{Résultats}
+%\begin{itemize}
+%\item Proportion de dendrites: $9.6\;\%$
+%\item Surface moyenne: $358 \; px \approx \;128 \; \mu m^2$ 
+%
+%\end{itemize}
+%\end{block}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=71,lastline=75,firstnumber=71]{listings/improc/image.py}
+%\end{columns}
+%\begin{alertblock}{Conclusion}
+%\begin{itemize}
+%\item Outils de traitement quantitatif des images.
+%\item Applications très vastes.
+%\end{itemize} 
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{Analyse fréquentielle}
+% \begin{columns}
+%\column{.5\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/lapin_original.png}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=1,lastline=18,firstnumber=1]{listings/improc/lapin.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%Comment utiliser l'analyse fréquentielle pour modifier une image ?
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{FFT 2D}
+% \begin{columns}
+%\column{.5\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/lapin_spectre.png}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=20,lastline=28,firstnumber=20]{listings/improc/lapin.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%Comment construire un filtre basique à appliquer au spectre du lapin.
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{Filtre passe bas (1/3)}
+% \begin{columns}
+%\column{.5\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/lapin_lowpass.png}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=30,lastline=42,firstnumber=30]{listings/improc/lapin.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%Comment appliquer ce filtre à notre spectre ?
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{Filtre passe bas (2/3)}
+% \begin{columns}
+%\column{.5\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/lapin_lowpass2.png}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=44,lastline=52,firstnumber=44]{listings/improc/lapin.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%Quel est le résultat par FFT inverse ?
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{Filtre passe bas (3/3)}
+% \begin{columns}
+%\column{.5\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/lapin_lowpass3.png}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=54,lastline=62,firstnumber=54]{listings/improc/lapin.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%\begin{itemize}
+%\item Trouvez vous la qualité correcte ?
+%\item En vous inspirant des exemples 1D, avez vous une idée pour améliorer les choses ?
+%\end{itemize}
+%\end{alertblock}
+%\end{frame}
+%
+%\begin{frame}{Filtre passe haut}
+% \begin{columns}
+%\column{.5\textwidth}
+%\includegraphics[width=1.\textwidth]{figures/lapin_highpass.png}
+%\column{.5\textwidth}
+%\lstinputlisting[firstline=64,lastline=78,firstnumber=64]{listings/improc/lapin.py}
+%\end{columns}
+%\begin{alertblock}{Questions}
+%\begin{itemize}
+%\item Quelles applications ?
+%\end{itemize}
+%\end{alertblock}
+%\end{frame}
 
 \end{document}
 

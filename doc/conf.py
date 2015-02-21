@@ -30,8 +30,8 @@ sys.path.append(os.path.abspath('sphinxext'))
 extensions = ['sphinx.ext.autodoc', 
 'sphinx.ext.doctest', 
 'sphinx.ext.todo', 
-'sphinx.ext.pngmath', 
-#'sphinx.ext.mathjax',
+#'sphinx.ext.pngmath', 
+'sphinx.ext.mathjax',
 'sphinx.ext.viewcode',
 'sphinx.ext.doctest',
 'matplotlib.sphinxext.mathmpl',
@@ -185,7 +185,7 @@ html_show_copyright = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Outils numériques'
+htmlhelp_basename = u'Outils numériques'
 
 html_copy_source = True
 html_show_sourcelink = True

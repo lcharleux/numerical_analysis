@@ -51,6 +51,7 @@ Dans cette partie, nous utiliserons une  image générée pour l'occasion:
 .. plot:: Traitement_images/Example_code/generate_image.py
      
 Vous pouvez télécharger l'image ici: :download:`image.png <Traitement_images/Example_code/image.png>` 
+
 Histogramme
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -65,7 +66,7 @@ Un histogramme représente la répartition de la population de pixels en fonctio
 Seuillage
 ~~~~~~~~~~~~~~~~~~~~~~
 
-L'histogramme montre deux pics ( :math:`Z \approx 20' et :math:`Z \approx 230`) correspondant à deux populations de pixels. Le seuillage consiste à transformer une image monochrome en **image binaire** en appliquant un test booléen à chaque pixel. Une image binaire est ainsi formée de 0 et de 1 ou de **Vrai** et **Faux**. Dans le cas présent, on peut alors chercher séparer les deux populations en effectuant un seuillage :math:`Z > 120` :
+L'histogramme montre deux pics (:math:`Z = 20` et :math:`Z = 230`) correspondant à deux populations de pixels. Le seuillage consiste à transformer une image monochrome en une **image binaire** en appliquant un test booléen à chaque pixel. Une image binaire, c'est-à-dire formée de 0 et de 1 ou de **Vrai** et **Faux** est ainsi créé. Dans le cas présent, on peut alors chercher séparer les deux populations en effectuant un seuillage :math:`Z > 120` :
 
 .. plot:: Traitement_images/Example_code/image_seuillage.py
     :include-source: 
