@@ -113,7 +113,7 @@ _________________
 
 Ce sujet est une introduction aux questions abordées dans ce cours. On vous demande d'écrire un (ou plusieurs) scripts qui pour effectuer les tâches suivantes:
 
-#. Signal sinusoidal
+1. Signal sinusoidal
 
   #. Générer un signal sinusoidal de la forme :math:`x(t) = a  \sin (2 \pi f t + \phi)`.
   #. Construire une grille d'échantillonnage :math:`t` pour laquelle on peut contrôler la fréquence d'échantillonnage :math:`f_e` et la durée d'observation :math:`D`.
@@ -124,7 +124,7 @@ Ce sujet est une introduction aux questions abordées dans ce cours. On vous dem
   #. Tracer le spectre du signal.
   #. Expliquer l'influence de :math:`a` , :math:`f` et :math:`\phi` sur le spectre.
 
-#. Autres signaux
+2. Autres signaux
   
   #. Réutilisez le code produit dans les questions précédentes et appliquez le à un signal carré.
   #. Même démarche pour un signal constant.
