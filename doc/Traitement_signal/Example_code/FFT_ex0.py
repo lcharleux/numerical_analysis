@@ -9,7 +9,7 @@ def signal(t): return np.sin(2. * np.pi * t / T)
 D = 2. # Duree d'observation
 fe = 100. # Frequence d'echantillonnage
 N = int(D * fe) + 1 # Nombre de points enregistres
-t = np.linspace(0., D, N) # Grille d'echantillonnage
+t = np.linspace(0., (N-1)/fe, N) # Grille d'echantillonnage
 x = signal(t)
 # FFT
 X = fftpack.fft(x)
