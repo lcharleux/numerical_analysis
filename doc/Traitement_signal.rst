@@ -80,13 +80,59 @@ Analyse Spectrale
 Principe  
 ***********
 
-L' `analyse spectrale <http://fr.wikipedia.org/wiki/Analyse_spectrale>`_ d'un signal consiste à construire son spectre, c'est-à-dire sa décomposition sous forme d'une somme fonctions périodiques. Plusieurs outils existent selon le type de signal étudié. Dans la pratique, nous allons travaillons toujours avec des signaux apériodiques échantillonnés, l'outil de base de base pour construire le spectre est la `Transformé de Fourier Discrète (DFT) <http://fr.wikipedia.org/wiki/Transformation_de_Fourier_discr%C3%A8te>`_ ou son implémentation rapide, la `FFT <http://fr.wikipedia.org/wiki/Transformation_de_Fourier_rapide>`_ . En python, le moyen le plus simple pour accéder aux algorithmes de FFT est `scipy <https://scipy-lectures.github.io/intro/scipy.html#fast-fourier-transforms-scipy-fftpack>`_ . 
+L' `analyse spectrale <http://fr.wikipedia.org/wiki/Analyse_spectrale>`_ d'un signal consiste à construire son spectre, c'est-à-dire sa décomposition sous forme d'une somme fonctions périodiques. Plusieurs outils existent selon le type de signal étudié. Dans la pratique, nous allons travaillons toujours avec des signaux apériodiques échantillonnés, l'outil de base de base pour construire le spectre est la `Transformé de Fourier Discrète (DFT) <http://fr.wikipedia.org/wiki/Transformation_de_Fourier_discr%C3%A8te>`_ ou son implémentation rapide, la `FFT <http://fr.wikipedia.org/wiki/Transformation_de_Fourier_rapide>`_ . En python, le moyen le plus simple pour accéder aux algorithmes de FFT est `scipy <https://scipy-lectures.github.io/intro/scipy.html#fast-fourier-transforms-scipy-fftpack>`_ . L'algorithem FFT impose que le nombre d'échantillon :math:`N` soit une puissance de 2.
+
+Dans la pratique la FFT d'un signal :math:`x` se présente de la manière suivante:
+
+>>> from scipy import fftpack
+>>>  X = fftpack.fft(x)
+
+Le vecteur :math:`X` est composé de :math:`N` coefficients complexes. La première moitié des coefficients du vecteur :math:`X` correspondent aux fréquences positives et la seconde aux fréquences négatives.
+
+>>> Xpos = X[0:N/2] # Coefficients correspondant aux frequences positives
+>>> Xneg = X[N/2:N] # Coefficients correspondant aux frequences negatives
+
+Dans notre cas, le signal :math:`x` étant réel, les coefficients correspondant aux fréquences négatives sont les conjugués des coefficients correspondant aux fréquences positives, ils n'apportent donc pas d'information utile. 
+
+Le vecteur fréquence :math:`f` correspondant au vecteur :math:`X` comporte :math:`N` coefficients se répartissant entre :math:`-f_e/2` et :math:`f_e/2`. Dans la pratique, il n'est pas intéressant de tracer les fréquences négatives, nous pouvons donc tracer un signal et son spectre de la manière suivante:
+
+.. plot:: Traitement_signal/Example_code/FFT_ex0.py
+    :include-source:  
 
 
-L'exemple ci-dessous montre le calcul de la FFT de plusieurs signaux sinusoidaux de fréquences différentes.
+Interprétation
+****************
+
+* Effet de la fréquence:
 
 .. plot:: Traitement_signal/Example_code/exemple_FFT_frequence.py
      
+
+Travaux dirigés
+_________________
+
+Ce sujet est une introduction aux questions abordées dans ce cours. On vous demande d'écrire un (ou plusieurs) scripts qui pour effectuer les tâches suivantes:
+
+#. Signal sinusoidal
+
+  #. Générer un signal sinusoidal de la forme :math:`x(t) = a  \sin (2 \pi f t + \phi)`.
+  #. Construire une grille d'échantillonnage :math:`t` pour laquelle on peut contrôler la fréquence d'échantillonnage :math:`f_e` et la durée d'observation :math:`D`.
+  #. Tracer le signal échantillonné.
+  #. Que se passe-t-il quand on augmente la fréquence du signal :math:`f` en laissant :math:`f_e` constante.
+  #. Calculer la transfromée de Fourier par FFT :math:`X` des coefficients :math:`x`.
+  #. Calculer les fréquences positives.
+  #. Tracer le spectre du signal.
+  #. Expliquer l'influence de :math:`a` , :math:`f` et :math:`\phi` sur le spectre.
+
+#. Autres signaux
+  
+  #. Réutilisez le code produit dans les questions précédentes et appliquez le à un signal carré.
+  #. Même démarche pour un signal constant.
+  #. Même démarche pour une gaussienne.
+  
+
+
+
 
 
 

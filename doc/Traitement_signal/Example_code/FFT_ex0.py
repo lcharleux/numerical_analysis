@@ -7,13 +7,14 @@ T = 1.
 def signal(t): return np.sin(2. * np.pi * t / T)
 # Echantillonnage
 D = 2. # Duree d'observation
-fe = 10. # Frequence d'echantillonnage
+fe = 100. # Frequence d'echantillonnage
 N = int(D * fe) + 1 # Nombre de points enregistres
 t = np.linspace(0., D, N) # Grille d'echantillonnage
-x = signal(te)
+x = signal(t)
 # FFT
-X = fftpack.fft(xe)
-f = np.linspace(-fe/2., fe/2., N)
+X = fftpack.fft(x)
+fpos = np.linspace(0., fe/2., N/2)
+Xpos = X[0:N/2]
 # Trace du signal et de son spectre
 fig = plt.figure(0)
 ax = fig.add_subplot(3,1,1)
@@ -22,11 +23,12 @@ plt.grid()
 plt.xlabel("Temps $t$")
 plt.ylabel("Amplitude $x(t)$")
 ax = fig.add_subplot(3,1,2)
-plt.plot(f, abs(X), 'b-')
+plt.plot(fpos, abs(Xpos), 'b*-')
 plt.grid()
+plt.ylabel("Amplitude $|X(f)|$")
 ax = fig.add_subplot(3,1,3)
-plt.plot(f, np.degrees(np.angle(X)), 'b-')
+plt.plot(fpos, np.degrees(np.angle(Xpos)), 'b*-')
 plt.grid()
-plt.xlabel("Fréquence $f$")
-plt.ylabel("Amplitude $x(t)$")
+plt.xlabel("Frequence $f$")
+plt.ylabel("Amplitude $arg(X(f)) [^o]$")
 plt.show()
