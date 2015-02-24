@@ -8,7 +8,7 @@ def signal(t): return np.sin(2. * np.pi * t / T)
 D = 2. # Duree d'observation
 fe = 6. # Frequence d'echantillonnage
 N = int(D * fe) + 1 # Nombre de points enregistres
-te = np.linspace(0., D, N) # Grille d'echantillonnage
+te = np.linspace(0., (N-1)/fe, N) # Grille d'echantillonnage
 tp = np.linspace(0., D, 1000) # Grille plus fine pour tracer l'allure du signal parfait
 # Trace du signal
 plt.plot(te, signal(te), 'or-', label = u"Signal echantillonne")
