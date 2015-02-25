@@ -30,7 +30,7 @@ sys.path.append(os.path.abspath('sphinxext'))
 extensions = ['sphinx.ext.autodoc', 
 'sphinx.ext.doctest', 
 'sphinx.ext.todo', 
-#'sphinx.ext.pngmath', 
+'sphinx.ext.pngmath', 
 'sphinx.ext.mathjax',
 'sphinx.ext.viewcode',
 'sphinx.ext.doctest',
@@ -42,6 +42,9 @@ extensions = ['sphinx.ext.autodoc',
 'sphinx.ext.doctest',
 'ipython_console_highlighting',
 'numpydoc']
+
+pngmath_latex_preamble=r'\usepackage[active]{preview}' # + other custom stuff for inline math, such as non-default math fonts etc.
+pngmath_use_preview=True
 
 mathjax_path="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 

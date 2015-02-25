@@ -131,8 +131,77 @@ Ce sujet est une introduction aux questions abordées dans ce cours. On vous dem
   #. Même démarche pour une gaussienne.
   
 
+Travaux Pratiques
+___________________
+
+1. Signaux 
 
 
 
+On a en enregistré deux signaux expérimentaux au moyen d'un accéléromètre:
 
+* Un signal enregistré par un accéléromètre sur une cloche: :download:`cloche.txt <Traitement_signal/Samples/cloche.txt>`.
+* Un signal enregistré sur une poutre que l'on met en vibration au moyen d'un marteau de choc: :download:`poutre_Al_flexion.txt <Traitement_signal/Samples/poutre_Al_flexion.txt>`.
+
+2. Etude de la poutre
+
+
+La poutre est constituée d'un alliage d'aluminium. Elle est de forme parallélépipédique de longueur :math:`l = 600 \; mm`, de hauteur de :math:`h = 15 \; mm` et de largeur de :math:`b = 30 \; mm`. La masse volumique est mesurée préalablement est vaut :math:`\rho = 2700 \; kg/m^3`. Elle est sollicitée de manière à vibrer en flexion. D'un point de vue théorique, une poutre sollicité en flexion va présenter plusieurs modes propres correspondant chacun à une fréquence propre :math:`f_n` vérifiant:
+
+.. math::
+
+   f_n = \frac{C_n^2}{l^2}\sqrt{\frac{E}{\rho}} \sqrt{ \frac{I}{S} }
+
+Avec:
+
+* :math:`I`: le moment quadratique de la section qui vaut: :math:`b h^3 / 12`.
+* :math:`S`: l'aire de la section de la poutre qui vaut :math:`b h` .
+* :math:`C_n`: un coefficient qui dépent du numéro :math:`n`: du mode considéré.
+
+On donne:
+
++------------+--------------------------+
+| :math:`n`  |    :math:`C_n^2`         |
++============+==========================+
+| 1          |  22.37                   |
++------------+--------------------------+
+| 2          | 61.67                    |
++------------+--------------------------+
+| >2         | :math:`((2n + 1)\pi/2)^2`|
++------------+--------------------------+
+
+**Travail demandé**: écrire un script Python qui effectue les tâches suivantes:
+
+  a. Tracer le signal de l'accélération en fonction du temps.
+  b. Calculer le spectre de l'accélération par FFT.
+  c. Tracer le module du spectre :math:`|X|`:.
+  d. Identifier automatiquement les modes propres de la poutre.
+  e. Déterminer le module du Young :math:`E`: de l'alliage utilisé.  
+
+3. Etude de la cloche.
+
+La cloche est prévue pour sonner le *Ré*, implique de produire certaines fréquences particulières
+
++-------------+-----------------+---------------+
+| Composante  |  Formule        |     Valeur    |
++=============+=================+===============+
+|  Hum        |  :math:`f_0`    | 276.8 Hz      |
++-------------+-----------------+---------------+
+| Fondamentale|  :math:`2f_0`   | 553.6 Hz      |
++-------------+-----------------+---------------+
+| Tierce      |  :math:`2.4f_0` | 664.3 Hz      |
++-------------+-----------------+---------------+
+| Quinte      |  :math:`3f_0`   | 830.4 Hz      |
++-------------+-----------------+---------------+
+| Octave      |  :math:`4f_0`   | 1107 Hz       |
++-------------+-----------------+---------------+
+
+**Travail demandé**: écrire un script Python qui effectue les tâches suivantes. Pour ce faire vous pouvez grandement réutiliser les outils développés dans la partie précédente:
+
+  a. Tracer le signal de l'accélération en fonction du temps.
+  b. Calculer le spectre de l'accélération par FFT.
+  c. Tracer le module du spectre :math:`|X|` .
+  d. Identifier automatiquement les différentes harmoniques présentes dans le signal.
+  e. Déterminer le niveau d'erreur sur chaque harmonique. 
+  
 
