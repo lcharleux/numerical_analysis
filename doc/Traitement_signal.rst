@@ -150,7 +150,7 @@ La poutre est constituée d'un alliage d'aluminium. Elle est de forme parallél�
 
 .. math::
 
-   f_n = \frac{C_n^2}{l^2}\sqrt{\frac{E}{\rho}} \sqrt{ \frac{I}{S} }
+   f_n = \frac{1}{2\pi}\frac{C_n^2}{l^2}\sqrt{\frac{E}{\rho}} \sqrt{ \frac{I}{S} }
 
 Avec:
 
