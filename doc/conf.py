@@ -28,9 +28,6 @@ sys.path.append(os.path.abspath('sphinxext'))
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = ['sphinx.ext.autodoc', 
-'sphinx.ext.doctest', 
-'sphinx.ext.todo', 
-'sphinx.ext.pngmath', 
 'sphinx.ext.mathjax',
 'sphinx.ext.viewcode',
 'sphinx.ext.doctest',
@@ -38,15 +35,13 @@ extensions = ['sphinx.ext.autodoc',
 'matplotlib.sphinxext.only_directives',
 'matplotlib.sphinxext.plot_directive',
 'ipython_directive',
-'sphinx.ext.autodoc',
-'sphinx.ext.doctest',
 'ipython_console_highlighting',
 'numpydoc']
 
-pngmath_latex_preamble=r'\usepackage[active]{preview}' # + other custom stuff for inline math, such as non-default math fonts etc.
-pngmath_use_preview=True
+#pngmath_latex_preamble=r'\usepackage[active]{preview}' # + other custom stuff for inline math, such as non-default math fonts etc.
+#pngmath_use_preview=True
 
-mathjax_path="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+#mathjax_path="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

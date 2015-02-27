@@ -59,7 +59,7 @@ Le  `théorème de Shannon Nyquist <http://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A
 
    f < \frac{f_e}{2}
 
-Le cas extr^eme où :math:`f = f_e/2` est représenté ci-dessous.
+Le cas extrême où :math:`f = f_e/2` est représenté ci-dessous.
 
 .. plot:: Traitement_signal/Example_code/sampling_shannon.py
     :include-source: 
@@ -82,6 +82,9 @@ Principe
 
 L' `analyse spectrale <http://fr.wikipedia.org/wiki/Analyse_spectrale>`_ d'un signal consiste à construire son spectre, c'est-à-dire sa décomposition sous forme d'une somme fonctions périodiques. Plusieurs outils existent selon le type de signal étudié. Dans la pratique, nous allons travaillons toujours avec des signaux apériodiques échantillonnés, l'outil de base de base pour construire le spectre est la `Transformé de Fourier Discrète (DFT) <http://fr.wikipedia.org/wiki/Transformation_de_Fourier_discr%C3%A8te>`_ ou son implémentation rapide, la `FFT <http://fr.wikipedia.org/wiki/Transformation_de_Fourier_rapide>`_ . En python, le moyen le plus simple pour accéder aux algorithmes de FFT est `scipy <https://scipy-lectures.github.io/intro/scipy.html#fast-fourier-transforms-scipy-fftpack>`_ . L'algorithem FFT impose que le nombre d'échantillon :math:`N` soit une puissance de 2.
 
+>>> N = len(x)
+>>> fe = 1. / (t[1] - t[0])
+
 Dans la pratique la FFT d'un signal :math:`x` se présente de la manière suivante:
 
 >>> from scipy import fftpack
@@ -96,6 +99,10 @@ Dans notre cas, le signal :math:`x` étant réel, les coefficients correspondant
 
 Le vecteur fréquence :math:`f` correspondant au vecteur :math:`X` comporte :math:`N` coefficients se répartissant entre :math:`-f_e/2` et :math:`f_e/2`. Dans la pratique, il n'est pas intéressant de tracer les fréquences négatives, nous pouvons donc tracer un signal et son spectre de la manière suivante:
 
+>>> f = np.linspace(0., fe/2., N/2)  
+
+Mise en pratique:
+
 .. plot:: Traitement_signal/Example_code/FFT_ex0.py
     :include-source:  
 
@@ -109,8 +116,7 @@ Interprétation
      
 
 Travaux dirigés
-_________________
-
+-----------------
 Ce sujet est une introduction aux questions abordées dans ce cours. On vous demande d'écrire un (ou plusieurs) scripts qui pour effectuer les tâches suivantes:
 
 1. Signal sinusoidal
@@ -132,7 +138,7 @@ Ce sujet est une introduction aux questions abordées dans ce cours. On vous dem
   
 
 Travaux Pratiques
-___________________
+------------------
 
 1. Signaux 
 
