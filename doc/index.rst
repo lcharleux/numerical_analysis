@@ -16,7 +16,7 @@ Contenu du cours:
    Traitement_signal
    Traitement_images
    Optimisation
-   Exercices
+  
 
 
 

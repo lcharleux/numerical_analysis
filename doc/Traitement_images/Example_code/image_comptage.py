@@ -2,6 +2,7 @@ from PIL import Image
 import numpy as np    
 from matplotlib import pyplot as plt
 from matplotlib import cm 
+from scipy import ndimage
 im = Image.open('../Slides/figures/image.jpg')           
 channels = im.split()
 z = np.array(channels[0])              
