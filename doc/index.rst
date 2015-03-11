@@ -10,7 +10,7 @@ Cette partie du cours porte sur le traitement d'image et l'optimisation. Si vous
 Contenu du cours:
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 5
    
    Python
    Traitement_signal
