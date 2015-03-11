@@ -4,6 +4,7 @@ ___________________
 
 Les images numériques sont des images décrites dans un format numérique. On peut les utiliser pour interpréter quantitativement certaines grandeurs. Cette partie dresse un rapide tableau des différentes approches basiques qui permettent d'effectuer ces tâches et donne des pistes pour aller plus loin sur chaque thème abordé.
 
+Les points abordés ici sont détaillés plus finement dans le cours: :download:`Traitement_Signal_slides.pdf <Traitement_images/Slides/Traitement_Images_slides.pdf>` 
 
 Formation
 ----------------
@@ -46,11 +47,36 @@ Une image se résumera donc à une matrice :math:`Z_{ij}` où :math:`i` et :math
 Operations
 -----------------
 
-Dans cette partie, nous utiliserons une  image générée pour l'occasion:
+Dans cette partie, nous utiliserons aussi une image générée pour l'occasion:
 
 .. plot:: Traitement_images/Example_code/generate_image.py
      
 Vous pouvez télécharger l'image ici: :download:`image.jpg <Traitement_images/Slides/figures/image.jpg>` 
+
+Lecture
+********
+
+.. plot:: Traitement_images/Example_code/grenouille.py
+    :include-source:
+
+Sauvegarde
+************
+
+.. plot:: Traitement_images/Example_code/grenouille_save.py
+    :include-source:
+
+
+Rognage
+**********
+
+.. plot:: Traitement_images/Example_code/grenouille_crop.py
+    :include-source:
+
+Rotations
+************
+
+.. plot:: Traitement_images/Example_code/grenouille_rotate.py
+    :include-source:
 
 Histogramme
 **************
@@ -120,7 +146,15 @@ On vous propose de travailler sur l'image  `suivante: <http://www.onera.fr/sites
 Travaux Pratiques
 -----------------
 
-En travaux.
+On vous demande de travailler sur une grille d'altitude de l'Euroe (télécharger `europe.tif <http://www.eea.europa.eu/data-and-maps/figures/elevation-map-of-europe>`_). La grille comporte des pixels représentant 1 km de coté. On vous fournit une amorce de programme `ici <Traitement_images/Example_code/europe.py>`_:
+
+1. Qelle est la surface de terre présente sur la carte ?
+2. Dans cette surface de terre, quelle est la proportion d'iles ?
+3. Parmi les iles, quelles sont les 5 lus grandes dans l'ordre ?
+4. Quelle ile a la plus grande altitude moyenne ?
+5. Quelle proportion de surface de terre perdrait l'Europe si le niveau de la mer montait de 10 m. Même question pour 50 m.
+6. Quelle ile a la plus grande longueur de côtes ramenée à sa surface ? Ce résultat est-il discutable ?
+7. Quelle est l'ile la plus étendue d'est en ouest ?
 
 
 
