@@ -6,7 +6,6 @@ from matplotlib import cm
 
 im = Image.open('europe.tif')           # PIL permet de lire tous les formats d'images
 Nx, Ny = im.size                        # On reduit la definition de l'image
-#im = im.resize((Nx/10, Ny/10), Image.ANTIALIAS)
 Z = np.array(im).astype(np.float64)     # On convertir l'image en array 
 max_altitude = 1000.                    # Altitude maximale en metres, cette donnee est un peu douteuse, (a confirmer).
 Z = Z / Z.max() * max_altitude          # On recale les altitudes 

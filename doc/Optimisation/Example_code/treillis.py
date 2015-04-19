@@ -7,6 +7,40 @@ from scipy import optimize as opt # Optimize
 import numpy as np                # Numpy
 import matplotlib.pyplot as plt   # Pyplot
 from matplotlib import cm         # Colormaps
+import time
+
+class Stalker(object):
+  """
+  A stalker class to spy inputs and outputs of a function.
+  """
+
+  def __init__(self, func, speak = False, label = "Function"):
+      self.func = func
+      self.args = []
+      self.kwargs = []
+      self.speak = speak
+      self.label = label
+      self.out =  []
+      self.time = []         
+  def __call__(self, *args, **kwargs):
+    self.args.append(args)
+    self.kwargs.append(kwargs)
+    out = self.func(*args, **kwargs)
+    self.out.append(out)
+    self.time.append(time.time())
+    # Some messages
+    if self.speak:
+      a = ""
+      if args != (): 
+        for v in args:
+          a += str(v) + ","
+      a = a[:-1] + ", "   
+      if kwargs != {}:
+        for k in kwargs.keys():
+          a += "{0} = {1},".format(k, kwargs[k])
+      a = a[:-1]    
+      print "{0} => f({1}) = {2}".format(self.label, a, out)
+    return out
 
 
 # CONDITIONS INITIALES
@@ -46,11 +80,12 @@ E = Epot(Xb, Yb)
 
 # Methode du simplexe
 params0 = np.array([xb, yb])
-sol, steps = opt.fmin(ma_fonction, params0, retall = True)
-steps = np.array(steps).transpose()
-x = steps[0]
-y = steps[1]
-xb2, yb2 = sol[0],sol[1] 
+sfonc = Stalker(ma_fonction)
+sol = opt.minimize(sfonc, params0, method = "Nelder-Mead")
+steps = np.array(sfonc.args).transpose()
+x = steps[0][0]
+y = steps[1][0]
+xb2, yb2 = steps[0][0][-1],steps[1][0][-1] 
 
 # AFFICHAGE
 deport = .05    # Deport du texte

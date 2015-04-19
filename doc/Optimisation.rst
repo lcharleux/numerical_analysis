@@ -35,23 +35,34 @@ Le problème peut donc être vu comme la minimisation d'une fonction scalaire (*
     :include-source: 
 
 
-Regressions
-++++++++++++
 
-Ici on cherche à représenter un groupe de points par une fonction dont certains paramètres sont ajustables. 
-
-.. plot:: Optimisation/Example_code/regression.py
-    :include-source: 
 
 
 
 Algorithmes
 ===========
 
-De nombreux algorithmes sont dédiés à l'optimisation. Le choix d'un de ces algorithmes se fait en fonction du problème. Voici les deux qu'il est essentiel de connaître:
+Le choix d'algorithmes de résolution des problèmes d'optmisation est asssez vaste. Plusieurs critères de choix sont utilisés, dans la pratique les principaux seront:
 
-* `Nelder-Mead <http://fr.wikipedia.org/wiki/M%C3%A9thode_de_Nelder-Mead>`_ (NM): algorithme ancien mais généraliste. Dans scipy, voir: `scipy.optimize.fmin` (`doc <http://docs.scipy.org/doc/scipy-0.7.x/reference/generated/scipy.optimize.fmin.html>`_ )
-* `Levenberg-Marquardt <http://fr.wikipedia.org/wiki/Algorithme_de_Levenberg-Marquardt>`_ (LM): algorithme de référence pour la minimisation aux moins carrés. Dans scipy, voir: `scipy.optimize.leastsq` (`doc <http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.leastsq.html>`_ )
+* La présence ou non de contraintes.
+* La présence de bruit sur la fonctionnelle.
+
+Le site `scipy lectures <http://scipy-lectures.github.io/advanced/mathematical_optimization/>`_ fournit des explications pratiques pour effectuer ces choix. De plus, vous avez à tous ces algorithmes de manière identique au travers de  la fonction `minimize <http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize>`_ .
+
+
+Travaux Dirigés
+=================
+
+Dans le cadre du TD dédié à l'optimisation, vous allez travailler sur un problème très classique dans ce domaine, la régression.
+
+1. Ecrivez une fonction mathématique :math:`g(x, a, b)` où :math:`x` est la variable et :math:`(a,b)` des paramètres de votre choix.
+2. Evaluez cette fonction sur une grille de points :math:`X`, les valeurs associées seront notées :math:`Y = g(X, a_0, b_0)` 
+3. Ecrivez une fonctionnelle :math:`f` qui décrit l'erreur aux moindre carrés entre les les points précalculés et :math:`Y` et la fonction :math:`g` évaluée sur :math:`X` pour un autre set de paramètres :math:`(a,b)` .
+4. Retrouvez vos paramètres initiaux par optmimisation.
+5. Ajoutez du bruit à :math:`Y` et recommencez.    
+
+
+
 
 
 
