@@ -12,7 +12,7 @@ from matplotlib import cm         # Colormaps
 
 #------------------------------------------------------------------------
 # POSITION DES POINTS ET DONNEES PHYSIQUES
-xa, xb = 0., 1.
+xa, xb = 0., .01
 ya, yb = 1., 0.
 m = 1.  # masse en kg
 g = 10. # gravite en ms**-2

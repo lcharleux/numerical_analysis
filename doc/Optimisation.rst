@@ -61,7 +61,30 @@ Dans le cadre du TD dédié à l'optimisation, vous allez travailler sur un prob
 4. Retrouvez vos paramètres initiaux par optmimisation.
 5. Ajoutez du bruit à :math:`Y` et recommencez.    
 
+Travaux Pratiques
+=================
 
+Ce TP vous propose de travailler sur l'optimisation de structures mécaniques type treillis. Pour ce faire, vous allez utiliser le package `truss <http://truss.readthedocs.org/en/latest/index.html>`_ dédié à ces problèmes. 
+
+1. Installez le package ``truss`` et prennez le en main.
+2. La structure ci-dessous est une poutre qui supporte une charge de :math:`F = 10\; kN` en son milieu au niveau du point :math:`G`. Les poutres sont constituées d'un acier qui a les propriétés suivantes: 
+
+  * Le module de Young du matériau utilisé est :math:`E = 210\; GPa`
+  * La masse volumique du matériau utilisé est :math:`\rho = 7800\; kg/m^3`
+  * La section des poutres est :math:`S = 1\; cm^2`
+  * La limite d'élasticité pratique est :math:`R_{pe} = 400\; MPa`
+
+.. image:: Optimisation/Example_code/treillis.png
+
+3. Vérifiez que la limite d'élasticité n'est pas dépassée. La structure est elle optimale en terme de de poids ? Notez bien le poids de la structure.
+4. Peut on jouer sur globalement sur la section des poutres pour alléger la structure. Si oui, mettez votre méthode en place et notez le poids obtenu.       
+5. Modifiez la position selon :math:`\vec y` des points D, F et H pour optimiser la raideur massique de la structure sans modifier la section des poutres otenue en 4. Que pensez vous du résultat ?
+6. Même question en modifiant aussi les positions horizontales des points C, D, E et F. Commentez le résultat.
+7. On vous demande maintenant d'optimisez individuellement la section des poutres de la structure obtenue en 7 pour que la limite d'élasticité soit approcher au mieux dans chaque poutre. 
+8. Recherchez des formes de structures plus optimisées en changeant le nombre de noeuds et leur positions.
+
+
+    
 
 
 
