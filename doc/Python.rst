@@ -10,12 +10,10 @@ Python présente plusieurs avantage à l'origine de son choix pour ce cours:
 Installation
 =============================
 
-A Polytech' Annecy-Chambéry, Python est présent sur toutes les machines et toutes les plateformes:
+A Polytech' Annecy-Chambéry, Python est présent sur toutes les machines sous Windows via la distribution `Python(x,y) <http://python-xy.github.io/>`_. Il s'agit d'un ensemble d'outils centrés sur Python et destinés aux scientifiques. Vous pouvez l'utiliser:
 
-* Sous Windows (XP/7): vous le trouverez dans le dossier **R:\\Python26** dans sa version 2.6.
-* Sous Fédora/Linux: il est installé de base et est accessible dans un terminal (Konsole par exemple) *via* la commande **python**.
-
-Sur les autres machines, voir la section dédiée sur le site `python.org/download <http://www.python.org/download/>`_.
+* Sur les machines de l'école: en ouvrant le dossier **R:\\Python26**.
+* Sur votre machine: l'ensemble est open source et peut être téléchargé sur le site.
 
 
 Introduction

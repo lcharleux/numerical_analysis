@@ -62,7 +62,7 @@ Dans le cadre du TD dédié à l'optimisation, vous allez travailler sur un prob
 5. Ajoutez du bruit à :math:`Y` et recommencez.    
 
 Travaux Pratiques
-=================
+===================
 
 Ce TP vous propose de travailler sur l'optimisation de structures mécaniques type treillis. Pour ce faire, vous allez utiliser le package `truss <http://truss.readthedocs.org/en/latest/index.html>`_ dédié à ces problèmes. 
 
