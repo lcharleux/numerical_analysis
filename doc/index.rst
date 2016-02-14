@@ -13,6 +13,8 @@ Contenu du cours:
    :maxdepth: 5
    
    Python
+   ODE/ODE
+   Interpolation
    Traitement_signal
    Traitement_images
    Optimisation
