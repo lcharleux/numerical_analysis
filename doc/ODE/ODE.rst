@@ -151,7 +151,7 @@ Euler method
 
 .. code:: python
 
-    dt = 0.05 # Pas de temps
+    dt = 0.02 # Pas de temps
     Y0 = np.array([0., 0., vx0, vy0])
     nt = int(tmax/dt) # Nombre de pas
     ti = np.linspace(0., nt * dt, nt)
@@ -162,10 +162,10 @@ Euler method
     def Euler(func, y0, t):
       dt = t[1] - t[0]
       nt = len(t)
-      Y  = np.zeros([nt, len(Y0)])
+      Y  = np.zeros([nt, len(y0)])
       Y[0] = y0
       for i in xrange(nt-1):
-        Y[i+1] = Y[i] + derivate(Y[i], t[i]) * dt
+        Y[i+1] = Y[i] + func(Y[i], t[i]) * dt
       return Y
     
     Y_euler = Euler(derivate, Y0, ti)
@@ -245,3 +245,12 @@ http://docs.scipy.org/doc/scipy-0.16.0/reference/generated/scipy.integrate.odein
 .. image:: ODE_files/ODE_12_0.png
 
 
+Tutorial
+--------
+
+In this example, you have to model and animate a pendulum.
+
+1. Write the constitutive equations.
+2. Reformulate the equations as a first order system of ODEs.
+3. Solve the problem using Euler, RK4 and ODE integrators.
+4. Compare the results.
