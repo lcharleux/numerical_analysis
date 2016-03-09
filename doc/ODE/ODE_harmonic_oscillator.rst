@@ -51,8 +51,15 @@ Where:
 
 In the case of the mechanical oscillator:
 
--  :math:`\omega_0 = \sqrt{\dfrac{k}{m}}`
--  $= $
+.. math::
+
+
+   \omega_0 = \sqrt{\dfrac{k}{m}}
+
+.. math::
+
+
+   \zeta = \dfrac{\mu}{2\sqrt{mk}} 
 
  Undampened oscillator
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -116,11 +123,15 @@ Part 2: Numerical solution with Euler integrator
 
 Solve the problem introduced in question 1 with the Euler integrator.
 
-Steps: 1. Rewrite the canonical equation as a system of first order ODEs
-depending of the variable :math:`X = [x, \dot x]`, 2. Code the
-derivative function :math:`f(X,t) = \dot X`, 3. Define initial
-conditions :math:`X_0`, 4. Solve the problem. 5. Plot the position
-:math:`x` along and compare it with the theoretical solution.
+Steps:
+
+1. Rewrite the canonical equation as a system of first order ODEs
+   depending of the variable :math:`X = [x, \dot x]`,
+2. Code the derivative function :math:`f(X,t) = \dot X`,
+3. Define initial conditions :math:`X_0`,
+4. Solve the problem.
+5. Plot the position :math:`x` along and compare it with the theoretical
+   solution.
 
 
 Part 3: Energies an errors
