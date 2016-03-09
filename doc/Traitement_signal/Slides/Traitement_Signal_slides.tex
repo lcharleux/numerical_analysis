@@ -161,136 +161,133 @@ $$
 \end{block}
 \end{frame}
 
-\section{Outils}
-  \subsection{Python, c'est quoi ?}
-  \begin{frame}{Python, c'est quoi ?}
-  \begin{block}{Pourquoi Python ?}
-  \begin{itemize}
-  \item La lourdeur des calculs nécessite des outils numériques.
-  \item Les signaux expérimentaux sont numérisés et donc aisément traités par ces outils.
-  \item Python est un langage simple, au spectre d'applications vaste.
-  \item Python est libre et donc gratuit, vous pouvez donc l'installer rapidement sur toute machine. Il est présent sur la majorité des distributions de Linux.
-  \item Pour l'installer et lire les documentations: \href{http://www.python.org/}{http://www.python.org/}
-  \item Modules utilisés: 
-  \begin{itemize}
-  \item Graphisme: \href{http://matplotlib.sourceforge.net/}{Matplotlib}
-  \item Calcul scientifique: \href{http://www.scipy.org/}{Scipy}
-  \item Calcul numérique: \href{http://numpy.scipy.org/}{Numpy}
-  \end{itemize}
-  \end{itemize}
-  \end{block}
-  \end{frame}
-  \subsection{Python: comment ça marche ?}
-  
-  
-  
-  \begin{frame}[containsverbatim]
-  \frametitle{Python: comment ça marche ?}
-  \begin{block}{Outils nécessaires}
-  \begin{itemize}
-  \item Un éditeur de texte reconnaissant la syntaxe.
-  \item Un terminal.
-  \end{itemize}
-  \end{block}
-  \begin{block}{Exemple}
-  On crée un fichier \lstinline!test.py! dont le contenu est (voir dossier  \lstinline!/listings!):    
-  \lstinputlisting{listings/test.py}
-  On execute Python dans un terminal avec une des commandes suivantes:
-  \begin{lstlisting}
-  python test.py
-  \end{lstlisting}
-  Ou:
-  \begin{lstlisting}
-  python 
-  execfile(test.py)
-  \end{lstlisting}
-  La seconde solution a l'intérêt de ne pas fermer l'interpréteur après l'exécution ce qui permet de débugger ou de modifier le code plus aisément.
-  \end{block}
-  
-
-  
-
-  \end{frame}
-\section{Signaux}
-  \subsection{Signal sinusoïdal}
-  
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal sinusoïdal (1/3)}
- \begin{block}{Définition} 
- \lstinputlisting{listings/signal_sinusoidal.py}
- \end{block}
-  
-  \begin{block}{Fonction de tracé} 
-  On construit une fonction qui assure le tracé:
-  \lstinputlisting{listings/trace_signal.py}
-  \end{block}
-  \end{frame}
-  
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal sinusoïdal (2/3)}
-  \begin{block}{Tracé du signal} 
-  \lstinputlisting{listings/exemple1.py}
-  \end{block}
-  \end{frame}
-  
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal sinusoïdal (3/3)}
-  On obtient le fichier (vectoriel) \lstinline!sinusoide.pdf!\\  
-  \includegraphics[width=1.\textwidth]{figures/sinusoide.pdf}
-  \end{frame}
-  
-  
-%  \subsection{Signal bisinusoïdal}
+%\section{Outils}
+%  \subsection{Python, c'est quoi ?}
+%  \begin{frame}{Python, c'est quoi ?}
+%  \begin{block}{Pourquoi Python ?}
+%  \begin{itemize}
+%  \item La lourdeur des calculs nécessite des outils numériques.
+%  \item Les signaux expérimentaux sont numérisés et donc aisément traités par ces outils.
+%  \item Python est un langage simple, au spectre d'applications vaste.
+%  \item Python est libre et donc gratuit, vous pouvez donc l'installer rapidement sur toute machine. Il est présent sur la majorité des distributions de Linux.
+%  \item Pour l'installer et lire les documentations: \href{http://www.python.org/}{http://www.python.org/}
+%  \item Modules utilisés: 
+%  \begin{itemize}
+%  \item Graphisme: \href{http://matplotlib.sourceforge.net/}{Matplotlib}
+%  \item Calcul scientifique: \href{http://www.scipy.org/}{Scipy}
+%  \item Calcul numérique: \href{http://numpy.scipy.org/}{Numpy}
+%  \end{itemize}
+%  \end{itemize}
+%  \end{block}
+%  \end{frame}
+%  \subsection{Python: comment ça marche ?}
+%  
+%  
+%  
 %  \begin{frame}[containsverbatim]
-%  \frametitle{Signal bisinusoïdal (1/2)}
+%  \frametitle{Python: comment ça marche ?}
+%  \begin{block}{Outils nécessaires}
+%  \begin{itemize}
+%  \item Un éditeur de texte reconnaissant la syntaxe.
+%  \item Un terminal.
+%  \end{itemize}
+%  \end{block}
+%  \begin{block}{Exemple}
+%  On crée un fichier \lstinline!test.py! dont le contenu est (voir dossier  \lstinline!/listings!):    
+%  \lstinputlisting{listings/test.py}
+%  On execute Python dans un terminal avec une des commandes suivantes:
+%  \begin{lstlisting}
+%  python test.py
+%  \end{lstlisting}
+%  Ou:
+%  \begin{lstlisting}
+%  python 
+%  execfile(test.py)
+%  \end{lstlisting}
+%  La seconde solution a l'intérêt de ne pas fermer l'interpréteur après l'exécution ce qui permet de débugger ou de modifier le code plus aisément.
+%  \end{block}
+%  \end{frame}
+
+%\section{Signaux}
+%  \subsection{Signal sinusoïdal}
+%  
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal sinusoïdal (1/3)}
+% \begin{block}{Définition} 
+% \lstinputlisting{listings/signal_sinusoidal.py}
+% \end{block}
+%  
+%  \begin{block}{Fonction de tracé} 
+%  On construit une fonction qui assure le tracé:
+%  \lstinputlisting{listings/trace_signal.py}
+%  \end{block}
+%  \end{frame}
+%  
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal sinusoïdal (2/3)}
+%  \begin{block}{Tracé du signal} 
+%  \lstinputlisting{listings/exemple1.py}
+%  \end{block}
+%  \end{frame}
+%  
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal sinusoïdal (3/3)}
+%  On obtient le fichier (vectoriel) \lstinline!sinusoide.pdf!\\  
+%  \includegraphics[width=1.\textwidth]{figures/sinusoide.pdf}
+%  \end{frame}
+%  
+%  
+%%  \subsection{Signal bisinusoïdal}
+%%  \begin{frame}[containsverbatim]
+%%  \frametitle{Signal bisinusoïdal (1/2)}
+%%  \begin{block}{Intérêt}
+%%  Ce signal est la somme de deux composantes sinusoïdales pures. Il permet la mise en évidence des interactions entre les deux composantes lors du traitement.
+%%  \end{block}
+%%  \begin{block}{Tracé}
+%%  \lstinputlisting{listings/exemple3.py}
+%%  \end{block}  
+%%  \end{frame}  
+%  
+%%  \begin{frame}{Signal bisinusoïdal (2/2)}
+%%  On obtient le fichier (vectoriel) \lstinline!bisinus.pdf!\\  
+%%  \includegraphics[width=1.\textwidth]{figures/bisinus.pdf}
+%%  \end{frame}  
+%  
+%  \subsection{Signal carré}
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal carré (1/3)}
+%  \begin{block}{Construction de la fonction} 
+%  \lstinputlisting{listings/signal_carre.py}
+%  \end{block}
+%  \end{frame}  
+%  
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal carré (2/3)}  
+%  \begin{block}{Tracé du signal} 
+%  \lstinputlisting{listings/exemple2.py}
+%  \end{block}
+%  \end{frame}
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal carré (3/3)}
+%  On obtient le fichier (vectoriel) \lstinline!carre.pdf!\\  
+%  \includegraphics[width=1.\textwidth]{figures/carre.pdf}
+%  \end{frame}
+%  
+%  \subsection{Signal expérimental: mesure d'accélération sur une cloche}
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal expérimental: mesure d'accélération sur une cloche}
 %  \begin{block}{Intérêt}
-%  Ce signal est la somme de deux composantes sinusoïdales pures. Il permet la mise en évidence des interactions entre les deux composantes lors du traitement.
+%  Ce signal pseudo périodique est obtenu expérimentalement au moyen d'un accéléromètre fixé sur une cloche (visible en salle C114) et excitée par un battant. Il est fourni dans une fichier sérialisé par le module Python \href{http://docs.python.org/library/pickle.html}{Pickle}.  
 %  \end{block}
 %  \begin{block}{Tracé}
-%  \lstinputlisting{listings/exemple3.py}
-%  \end{block}  
-%  \end{frame}  
-  
-%  \begin{frame}{Signal bisinusoïdal (2/2)}
-%  On obtient le fichier (vectoriel) \lstinline!bisinus.pdf!\\  
-%  \includegraphics[width=1.\textwidth]{figures/bisinus.pdf}
-%  \end{frame}  
-  
-  \subsection{Signal carré}
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal carré (1/3)}
-  \begin{block}{Construction de la fonction} 
-  \lstinputlisting{listings/signal_carre.py}
-  \end{block}
-  \end{frame}  
-  
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal carré (2/3)}  
-  \begin{block}{Tracé du signal} 
-  \lstinputlisting{listings/exemple2.py}
-  \end{block}
-  \end{frame}
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal carré (3/3)}
-  On obtient le fichier (vectoriel) \lstinline!carre.pdf!\\  
-  \includegraphics[width=1.\textwidth]{figures/carre.pdf}
-  \end{frame}
-  
-  \subsection{Signal expérimental: mesure d'accélération sur une cloche}
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal expérimental: mesure d'accélération sur une cloche}
-  \begin{block}{Intérêt}
-  Ce signal pseudo périodique est obtenu expérimentalement au moyen d'un accéléromètre fixé sur une cloche (visible en salle C114) et excitée par un battant. Il est fourni dans une fichier sérialisé par le module Python \href{http://docs.python.org/library/pickle.html}{Pickle}.  
-  \end{block}
-  \begin{block}{Tracé}
-  \lstinputlisting{listings/exemple4.py}
-  \end{block}
-  \end{frame}
-  \begin{frame}[containsverbatim]
-  \frametitle{Signal expérimental: mesure d'accélération sur une cloche}
-  On obtient le fichier (vectoriel) \lstinline!cloche.pdf!\\  
-  \includegraphics[width=1.\textwidth]{figures/cloche.pdf}
-  \end{frame}
+%  \lstinputlisting{listings/exemple4.py}
+%  \end{block}
+%  \end{frame}
+%  \begin{frame}[containsverbatim]
+%  \frametitle{Signal expérimental: mesure d'accélération sur une cloche}
+%  On obtient le fichier (vectoriel) \lstinline!cloche.pdf!\\  
+%  \includegraphics[width=1.\textwidth]{figures/cloche.pdf}
+%  \end{frame}
 
 \section{Échantillonnage}
   \subsection{Les bases}
