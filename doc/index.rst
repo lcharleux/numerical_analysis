@@ -5,7 +5,7 @@ Méthodes numériques
   
 Cette partie du cours porte sur le traitement d'image et l'optimisation. Si vous avez des questions ou des remarques, posez les sur les forums du module ou contactez moi directement.
 
-`ludovic.charleux@univ-savoie.fr <mailto:ludovic.charleux@univ-savoie.fr>`_ 
+`ludovic.charleux@univ-savoie.fr <mailto:ludovic.charleux@univ-smb.fr>`_ 
   
 Contenu du cours:
 
