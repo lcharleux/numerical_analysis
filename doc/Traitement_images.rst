@@ -146,7 +146,7 @@ On vous propose de travailler sur l'image  `suivante: <http://www.onera.fr/sites
 Travaux Pratiques
 -----------------
 
-On vous demande de travailler sur une grille d'altitude de l'Euroe (télécharger `europe.tif <http://www.eea.europa.eu/data-and-maps/figures/elevation-map-of-europe>`_). La grille comporte des pixels représentant 1 km de coté. On vous fournit une amorce de programme `ici <Traitement_images/Example_code/europe.py>`_:
+On vous demande de travailler sur une grille d'altitude de l'Euroe (télécharger `europe.tif <http://www.eea.europa.eu/data-and-maps/figures/elevation-map-of-europe>`_). La grille comporte des pixels représentant 1 km de coté. On vous fournit une amorce de programme `ici <Traitement_images/Example_code/europe.py>`_ :
 
 1. Qelle est la surface de terre présente sur la carte ?
 2. Dans cette surface de terre, quelle est la proportion d'iles ?

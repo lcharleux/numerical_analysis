@@ -7,4 +7,5 @@ _____________
    
    Optimisation/notebooks/Optimization
    Optimisation/notebooks/Optimization_Tutorial
+   Optimisation/notebooks/Optimization_practical_work
    
