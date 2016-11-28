@@ -34,8 +34,8 @@ extensions = ['sphinx.ext.autodoc',
 #'matplotlib.sphinxext.mathmpl',
 'matplotlib.sphinxext.only_directives',
 'matplotlib.sphinxext.plot_directive',
-'ipython_directive',
-'ipython_console_highlighting',
+#'ipython_directive',
+#'ipython_console_highlighting',
 'numpydoc']
 
 #pngmath_latex_preamble=r'\usepackage[active]{preview}' # + other custom stuff for inline math, such as non-default math fonts etc.
@@ -107,7 +107,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#html_theme = 'default'
+html_theme = 'default'
 #html_theme = 'pyramid'
 
 #html_output_encoding = 'iso-8859-1'
