@@ -7,7 +7,11 @@ ______________
    
    ODE/ODE
    ODE/ODE_harmonic_oscillator
+   ODE/ODE_pendulum   
    ODE/ODE_solar_system
    
-Practical work notebook file can be downloaded here: :download:`ODE_harmonic_oscillator.ipynb <ODE/ODE_harmonic_oscillator.ipynb>`   
+Practical work notebook file can be downloaded here:
+
+*  :download:`ODE_pendulum.ipynb <ODE/ODE_pendulum.ipynb>`   
+*  :download:`ODE_harmonic_oscillator.ipynb <ODE/ODE_harmonic_oscillator.ipynb>`   
    
