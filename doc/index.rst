@@ -16,7 +16,7 @@ Contenu du cours:
    ODE
    Interpolation
    Traitement_signal
-   Traitement_images
+   image_processing
    Optimisation
   
 

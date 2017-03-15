@@ -143,18 +143,5 @@ On vous propose de travailler sur l'image  `suivante: <http://www.onera.fr/sites
 5. Compter les particules.
 6. Déterminer la taille moyenne des particules.
 
-Travaux Pratiques
------------------
-
-On vous demande de travailler sur une grille d'altitude de l'Euroe (télécharger `europe.tif <http://www.eea.europa.eu/data-and-maps/figures/elevation-map-of-europe>`_). La grille comporte des pixels représentant 1 km de coté. On vous fournit une amorce de programme `ici <Traitement_images/Example_code/europe.py>`_ :
-
-1. Qelle est la surface de terre présente sur la carte ?
-2. Dans cette surface de terre, quelle est la proportion d'iles ?
-3. Parmi les iles, quelles sont les 5 lus grandes dans l'ordre ?
-4. Quelle ile a la plus grande altitude moyenne ?
-5. Quelle proportion de surface de terre perdrait l'Europe si le niveau de la mer montait de 10 m. Même question pour 50 m.
-6. Quelle ile a la plus grande longueur de côtes ramenée à sa surface ? Ce résultat est-il discutable ?
-7. Quelle est l'ile la plus étendue d'est en ouest ?
-
 
 
